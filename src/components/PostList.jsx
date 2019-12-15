@@ -8,7 +8,9 @@ class PostList extends Component {
     this.props.fetchPosts();
   }
   render() {
+     console.log(this.props.posts);
     return (
+     
       <div className="ui container"> Post List </div>);
 
 
@@ -16,7 +18,7 @@ class PostList extends Component {
 }
 
 const mapPropToState = (state) => {
-  return { }
+  return { posts: state.posts }
 }
 
 export default connect(mapPropToState, { fetchPosts})(PostList);
